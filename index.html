@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dusemond Scavenger Hunt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+      #filler {
+        color: #005e9a;
+      }
+
+      #logo {
+        max-width: 20%;
+        padding-left: 10px;
+      }
+
+      #item-list {
+        justify-content: center;
+        align-items: center;
+        margin: 1% 20%;
+        padding: 5%;
+        background-color: #005e9a;
+        color: white;
+        border-radius: 30px;
+      }
+
+      #reset {
+        background-color:#005e9a;
+        border-radius: 100%;
+        color: white;
+        padding: 1%;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #005e9a;
+        color: white;
+        border-radius: 30px;
+      }
+
+      .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        max-width: 80%;
+
+      }
+
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .tickbox {
+        max-width: 5%;
+        min-width: 5%;
+        padding: 2%;
+        padding-top: 0;
+        justify-content: center;
+
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <img id="logo" src="https://dusemond.co.uk/wp-content/uploads/2019/10/dusemond-logo-white.png" alt="Dusemond Logo">
+      <h1>Scavenger Hunt</h1>
+      <h2 id="filler">You found the secret message</h2>
+    </div>
+    <div class="description">
+      <p>In this challenge you need to find all the items on this list. When you have found them all, take the items to your activity leader. </p>
+    </div>
+    <div id="item-list">
+      <div class="item row">
+        <p class="column">The oldest thing you can find</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Something borrowed</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">A rainbow of objects</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Something smaller than your thumbnail</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">A dead leaf</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Five identical items</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Something that floats</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">A hat</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Something squishy</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+      <div class="item row">
+        <p class="column">Something with a nose</p>
+        <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
+      </div>
+    </div>
+    <div id="reset">
+      <h2>Reset</h2>
+    </div>
+    <script type="text/javascript">
+      const tickbox = document.getElementsByClassName('tickbox');
+      for (let i = 0; i < tickbox.length; i++) {
+        tickbox[i].addEventListener('click', function(){
+          tickbox[i].src = "https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-ticked.png?raw=true"
+        })
+      }
+
+    const reset = document.getElementById('reset');
+    reset.addEventListener('click', function(){
+        for (let i = 0; i < tickbox.length; i++) {
+          tickbox[i].src ="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true";
+        }
+    });
+    </script>
+  </body>
+</html>
 
