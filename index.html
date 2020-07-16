@@ -18,8 +18,17 @@
 
       #item-list {
         font-size: 3rem;
-        width: 90%;
+        width: 100%;
       }
+
+      .button-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        width: 99%;
+
     }
       #filler {
         color: #005e9a;
@@ -45,6 +54,7 @@
         border-radius: 15%;
         color: white;
         font-size: 5rem;
+        flex-shrink: 2;
       }
 
 
@@ -252,7 +262,7 @@
         items[8].innerHTML = "A hat";
         items[9].innerHTML = "Something squishy";
         items[10].innerHTML = "Something with a nose";
-        stage--
+        stage--;
         } else if (stage === 3) {
           items[0].innerHTML = "Now take these photos and show them to your activity leader";
           items[1].innerHTML = "All of your group, with nobody touching the ground";
@@ -265,7 +275,7 @@
           items[8].innerHTML = "The second youngest member of your group";
           items[9].innerHTML = "All of your group pretending to be the royal family";
           items[10].innerHTML = "Something upside down";
-          stage
+          stage--;
         }
     };
 
