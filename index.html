@@ -12,11 +12,12 @@
       }
 
       #reset {
-        font-size: 2rem;
+        font-size: 4rem;
+
       }
 
       #item-list {
-        font-size: 2rem;
+        font-size: 3rem;
         width: 90%;
       }
     }
@@ -39,12 +40,13 @@
         border-radius: 30px;
       }
 
-      #reset {
+      .button {
         background-color:#005e9a;
-        border-radius: 100%;
+        border-radius: 15%;
         color: white;
-        padding: 1%;
+        font-size: 5rem;
       }
+
 
       .title {
         display: flex;
@@ -69,7 +71,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
       .tickbox {
@@ -78,6 +80,15 @@
         padding: 2%;
         padding-top: 0;
         justify-content: center;
+      }
+
+      .button-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        min-width: 60%;
 
       }
 
@@ -85,8 +96,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         font-family: 'Poppins', sans-serif;
+      }
+
+      h3 {
+        display: flex;
+        justify-content: space-around;
+        padding: 5%;
+        margin: 5%;
+        align-items: center;
       }
 
       .row {
@@ -112,67 +131,157 @@
       <h2 id="filler">You found the secret message</h2>
     </div>
     <div class="description">
-      <p>In this challenge you need to find all the items on this list. When you have found them all, take the items to your activity leader. </p>
+      <p class="items">In this challenge you need to find all the items on this list. When you have found them all, take the items to your activity leader. </p>
     </div>
     <div id="item-list">
       <div class="item row">
-        <p class="column">The oldest thing you can find</p>
+        <p class="column items">The oldest thing you can find</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Something borrowed</p>
+        <p class="column items">Something borrowed</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">A rainbow of objects</p>
+        <p class="column items">A rainbow of objects</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Something smaller than your thumbnail</p>
+        <p class="column items">Something smaller than your thumbnail</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">A dead leaf</p>
+        <p class="column items">A dead leaf</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Five identical items</p>
+        <p class="column items">Five identical items</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Something that floats</p>
+        <p class="column items">Something that floats</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">A hat</p>
+        <p class="column items">A hat</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Something squishy</p>
+        <p class="column items">Something squishy</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
       <div class="item row">
-        <p class="column">Something with a nose</p>
+        <p class="column items">Something with a nose</p>
         <img class="tickbox column" src="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true" alt="tickbox">
       </div>
     </div>
-    <div id="reset">
-      <h2>Reset</h2>
+    <div class="button-bar">
+      <div id="back" class="button">
+        <h3>Back</h3>
+      </div>
+      <div id="reset" class="button">
+        <h3>Reset</h3>
+      </div>
+      <div id="next" class="button">
+        <h3>Next</h3>
+      </div>
     </div>
     <script type="text/javascript">
+
       const tickbox = document.getElementsByClassName('tickbox');
-      for (let i = 0; i < tickbox.length; i++) {
-        tickbox[i].addEventListener('click', function(){
-          tickbox[i].src = "https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-ticked.png?raw=true"
-        })
-      }
+        for (let i = 0; i < tickbox.length; i++) {
+          tickbox[i].addEventListener('click', function(){
+            tickbox[i].src = "https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-ticked.png?raw=true"
+            });
+          };
 
     const reset = document.getElementById('reset');
-    reset.addEventListener('click', function(){
-        for (let i = 0; i < tickbox.length; i++) {
-          tickbox[i].src ="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true";
+    const resetter = () => {
+      for (let i = 0; i < tickbox.length; i++) {
+        tickbox[i].src ="https://github.com/Dusemond/scavengerhunt/blob/master/tickbox-unticked.png?raw=true";
+      };
+    }
+
+    reset.addEventListener('click', resetter);
+
+    const next = document.getElementById('next');
+    const back = document.getElementById('back');
+    const items = document.getElementsByClassName('items');
+    let stage = 1;
+
+    const sceneSelector = () => {
+      if (stage === 1) {
+        items[0].innerHTML = "Now take these photos and show them to your activity leader";
+        items[1].innerHTML = "All of your group, with nobody touching the ground";
+        items[2].innerHTML = "A selfie of someone taking a selfie";
+        items[3].innerHTML = "The tallest tree on campus";
+        items[4].innerHTML = "The coolest member of your group";
+        items[5].innerHTML = "The bluest thing you can find";
+        items[6].innerHTML = "A member of your group disguised as a different member of your group";
+        items[7].innerHTML = "An amazing view";
+        items[8].innerHTML = "The second youngest member of your group";
+        items[9].innerHTML = "All of your group pretending to be the royal family";
+        items[10].innerHTML = "Something upside down";
+        stage ++;
+      } else if (stage === 2) {
+        items[0].innerHTML = "Finally, choose 5 of these video ideas and film them";
+        items[1].innerHTML = "A 30 second nature documentary";
+        items[2].innerHTML = "A coronation";
+        items[3].innerHTML = "An incredible event";
+        items[4].innerHTML = "A 30 second comedy";
+        items[5].innerHTML = "A 30 second tragedy";
+        items[6].innerHTML = "An impression of one of your activity leaders or teachers";
+        items[7].innerHTML = "The luckiest person ever";
+        items[8].innerHTML = "A spooky event";
+        items[9].innerHTML = "A cooking show";
+        items[10].innerHTML = "A dance";
+        stage ++;
+      };
+    }
+
+    const backer = () => {
+      if (stage === 2) {
+        items[0].innerHTML = "In this challenge you need to find all the items on this list. When you have found them all, take the items to your activity leader.";
+        items[1].innerHTML = "The oldest thing you can find";
+        items[2].innerHTML = "Something borrowed";
+        items[3].innerHTML = "A rainbow of objects";
+        items[4].innerHTML = "Something smaller than your thumbnail";
+        items[5].innerHTML = "A dead leaf";
+        items[6].innerHTML = "Five identical items";
+        items[7].innerHTML = "Something that floats";
+        items[8].innerHTML = "A hat";
+        items[9].innerHTML = "Something squishy";
+        items[10].innerHTML = "Something with a nose";
+        stage--
+        } else if (stage === 3) {
+          items[0].innerHTML = "Now take these photos and show them to your activity leader";
+          items[1].innerHTML = "All of your group, with nobody touching the ground";
+          items[2].innerHTML = "A selfie of someone taking a selfie";
+          items[3].innerHTML = "The tallest tree on campus";
+          items[4].innerHTML = "The coolest member of your group";
+          items[5].innerHTML = "The bluest thing you can find";
+          items[6].innerHTML = "A member of your group disguised as a different member of your group";
+          items[7].innerHTML = "An amazing view";
+          items[8].innerHTML = "The second youngest member of your group";
+          items[9].innerHTML = "All of your group pretending to be the royal family";
+          items[10].innerHTML = "Something upside down";
+          stage
         }
-    })
+    };
+
+
+    next.addEventListener('click', function(){
+      resetter();
+      sceneSelector();
+    });
+
+    back.addEventListener('click', function(){
+      backer();
+    });
+
+
+
+
     </script>
   </body>
 </html>
